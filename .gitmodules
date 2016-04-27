@@ -1,0 +1,6 @@
+[submodule "modules/chien"]
+	path = modules/chien
+	url = https://github.com/davidmoeljadi/chien
+[submodule "modules/chitok"]
+	path = modules/chitok
+	url = https://github.com/lmorgadodacosta/chitok
