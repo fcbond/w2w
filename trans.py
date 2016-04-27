@@ -5,11 +5,11 @@
 ### * translate the words
 ###
 from collections import defaultdict as dd
-from chien.chien import cnendict
+from chien.chien import cnendict_internal as cnendict
 
 
 
-zh2en = dd(lambda: '???')
+zh2en = dd(lambda: '‽')
 zh2en['我'] = 'I'
 zh2en['吃'] = 'eat'  
 zh2en['饭'] = 'rice'
@@ -26,7 +26,13 @@ def translate(sent, dct):
         translated.append(dct[w])
     return translated
 
-test = '我吃猫猫猫猫猫了.'
-print(test)
-print(' '.join(translate(test,zh2en)))
+
+tests = ['我吃饭了.',
+         '我打猫.',
+         '狗溜猫',
+         '狗喜欢猫']
+
+for test in tests:
+    print(test)
+    print(' '.join(translate(test,zh2en)))
 
